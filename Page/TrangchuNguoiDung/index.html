@@ -1,0 +1,1610 @@
+<meta charset="utf-8">
+<title>Ti's Application1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Web site created using create-react-app">
+<img alt="Logo" src="https://appproject.dhiwise.com/dhiwise-logo.png?c=g3u-3ae3bd-lei&amp;v="
+    style="width:0px;height:0px;display:none;">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js" defer=""></script>
+<script>async function handleSlider() {
+        const slider = document.querySelector("#slider");
+
+        // Wait for all content to load before setting maxWidth
+        const imageList = slider.querySelectorAll("img");
+        const onLoadPromiseList = [];
+        for (const image of imageList) {
+            if (image.complete) continue;
+
+            const onLoadPromise = new Promise((resolve, reject) => {
+                if (image.complete) return resolve();
+                image.onload = resolve;
+                image.onerror = resolve;
+            })
+            onLoadPromiseList.push(onLoadPromise);
+        }
+        await Promise.all(onLoadPromiseList);
+
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 3
+        const slidesRequired = 6
+        for (let i = 0; (slides.length <= slidesToShow && i <= slidesRequired - 1); i++) {
+            const index = i % slidesToShow;
+            const clone = slides[index]?.cloneNode(true);
+            clone?.setAttribute("cloned", '');
+            sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider", {
+            grabCursor: true,
+            loop: true,
+            slidesOffsetAfter: 0,
+            slidesOffsetBefore: 0,
+            slidesPerView: 3,
+            navigation: {
+                prevEl: "#slider-control-prev",
+                nextEl: "#slider-control-next",
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                551: { slidesPerView: 1 },
+                1051: { slidesPerView: 2 },
+                1441: { slidesPerView: 3 },
+            },
+        })
+
+    }
+
+    /**
+     * Hydrate slider #slider
+     */
+    document.addEventListener("DOMContentLoaded", async () => {
+        try {
+            await handleSlider();
+        } catch (error) {
+            console.error(error);
+        }
+    });
+    async function handleSlider1() {
+        const slider = document.querySelector("#slider1");
+
+        // Wait for all content to load before setting maxWidth
+        const imageList = slider.querySelectorAll("img");
+        const onLoadPromiseList = [];
+        for (const image of imageList) {
+            if (image.complete) continue;
+
+            const onLoadPromise = new Promise((resolve, reject) => {
+                if (image.complete) return resolve();
+                image.onload = resolve;
+                image.onerror = resolve;
+            })
+            onLoadPromiseList.push(onLoadPromise);
+        }
+        await Promise.all(onLoadPromiseList);
+
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider1 > .swiper-wrapper");
+        const slides = document.querySelectorAll("#slider1 > .swiper-wrapper > .swiper-slide");
+
+        // Clone slides for infinite loop
+        const slidesToShow = 1
+        const slidesRequired = 2
+        for (let i = 0; (slides.length <= slidesToShow && i <= slidesRequired - 1); i++) {
+            const index = i % slidesToShow;
+            const clone = slides[index]?.cloneNode(true);
+            clone?.setAttribute("cloned", '');
+            sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider1", {
+            grabCursor: true,
+            loop: true,
+            slidesOffsetAfter: 0,
+            slidesOffsetBefore: 0,
+            slidesPerView: 1,
+            navigation: {
+                prevEl: "#slider1-control-prev",
+                nextEl: "#slider1-control-next",
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                551: { slidesPerView: 1 },
+                1051: { slidesPerView: 1 },
+                1441: { slidesPerView: 1 },
+            },
+        })
+
+    }
+
+    /**
+     * Hydrate slider #slider1
+     */
+    document.addEventListener("DOMContentLoaded", async () => {
+        try {
+            await handleSlider1();
+        } catch (error) {
+            console.error(error);
+        }
+    });</script>
+
+<div class="trag-ch-ng-i-d-ng">
+    <header>
+        <div class="row_two">
+            <div class="row_one">
+                <div class="row">
+                    <ul class="rowtrangch">
+                        <li>
+                            <a href="#">
+                                <p class="trangch ui text size-body_small_500">
+                                    Trang chủ</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="viclm-link">
+                                <p class="viclm ui text size-body_small_400">
+                                    Việc làm</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="viclm-link">
+                                <p class="viclm ui text size-body_small_400">
+                                    Doanh nghiệp</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="viclm-link">
+                                <p class="viclm ui text size-body_small_400">
+                                    Blog IT</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="rowcall_one">
+                        <div class="columncall_one">
+                            <a href="#">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_group_3864.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=006e4eee43a918d73a8c225b31035fadd0e6507901ccda3727e055ffb66778fe&amp;X-Amz-SignedHeaders=host"
+                                    alt="Call" class="call_one">
+                            </a>
+                        </div>
+                        <p class="class-8433456789 ui text size-body_small_500">
+                            +84 33456789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row_four">
+            <div class="row_three">
+                <div class="rowheaderlogo">
+                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_header_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=5001cc5249e778d9ac56dba7272e819209dc74f43ec8a2a9d697e02cd29bb5d8&amp;X-Amz-SignedHeaders=host"
+                        alt="Headerlogo" class="headerlogo_one">
+                    <label class="search ui input gray_100 size-lg outline round">
+                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fisearch.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=3cde93a74f527dfd37cc20efcd190c3479fd3cbddea0226bb48c05832ac125bc&amp;X-Amz-SignedHeaders=host"
+                            alt="Fi:search" class="fisearch">
+                        <input name="search" placeholder="Tìm kiếm theo tên việc làm, doanh nghiệp" type="text">
+                    </label>
+                </div>
+                <div class="rownh_tuyn">
+                    <button class="flex-row-center-center nh_tuyn_dng ui button blue_100_c1 size-3xl outline round">
+                        Nhà tuyển dụng</button>
+                    <button class="flex-row-center-center ng_nhp ui button primary_500_0 size-3xl fill round">
+                        Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="newscreenbody">
+        <div class="columnillustrat">
+            <div class="row_five">
+                <div class="rowtmkimcng">
+                    <div class="columntmkimcng">
+                        <p class="tmkimcng ui text size-display_01">
+                            Tìm kiếm công việc phù hợp với bạn.</p>
+                        <p class="nntngtmki ui text size-body_large_400">
+                            Nền tảng tìm kiếm và tuyển dụng việc làm chuyên biệt cho ngành CNTT, kết nối nhà tuyển dụng
+                            và ứng viên.</p>
+                        <div class="search-1">
+                            <div class="rowlineone_one">
+                                <div class="inputfield">
+                                    <div class="rowfisearch_one">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fisearch.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=3cde93a74f527dfd37cc20efcd190c3479fd3cbddea0226bb48c05832ac125bc&amp;X-Amz-SignedHeaders=host"
+                                            alt="Fisearch" class="senior_ux">
+                                        <p class="tkhatmkim ui text size-body_medium_400">
+                                            Từ khóa tìm kiếm</p>
+                                    </div>
+                                    <div class="lineone_one">
+                                    </div>
+                                </div>
+                                <label class="inputfield_one ui input gray_white size-2xl fill round">
+                                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fimappin.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=b7757d6817d298546c105fe2c7e148734a8248c8d48f37a50cc90ba6dd1dc88a&amp;X-Amz-SignedHeaders=host"
+                                        alt="Fi:map-pin" class="fisearch">
+                                    <input name="inputfield_one" placeholder="Địa điểm" type="text">
+                                </label>
+                            </div>
+                            <button class="flex-row-center-center tm_kim ui button primary_500_0 size-5xl fill round">
+                                Tìm kiếm</button>
+                        </div>
+                        <div class="rowgi">
+                            <p class="gi ui text size-body_small_400">
+                                Gợi ý: </p>
+                            <p class="software ui text size-body_small_400">
+                                Software Development,</p>
+                            <p class="tester ui text size-body_small_400">
+                                Tester,</p>
+                            <p class="pa ui text size-body_small_400">
+                                PA,</p>
+                            <p class="pa ui text size-body_small_400">
+                                Blockchain,</p>
+                        </div>
+                    </div>
+                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_illustration.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e074ce9df76903b3ece7894c6f55df2c6f445a480e8c88fa31eb27aee13ccae9&amp;X-Amz-SignedHeaders=host"
+                        alt="Illustration" class="illustration">
+                </div>
+            </div>
+            <div class="funfact">
+                <div class="feature">
+                    <button class="briefcase_one ui button primary_50_0 size-8xl fill round">
+                        <img
+                            src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_briefcase_duotone.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=22f5833335f54a2725461c000e1246c2ca7e54072c385377f84ad28f959a64c5&amp;X-Amz-SignedHeaders=host">
+                    </button>
+                    <div class="info">
+                        <h1 class="onehundredseventyfivethousandthreehundredtwentyfour ui heading size-heading_04">
+                            1,75,324</h1>
+                        <p class="livejob ui text size-body_medium_400">
+                            Việc làm hiện có</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <button class="briefcase_one ui button primary_50_0 size-8xl fill round">
+                        <img
+                            src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_buildings_duotone.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=80202bd910a21ccf95ea7278bdd031425f12afa6891ab4a946996b3226e87ba6&amp;X-Amz-SignedHeaders=host">
+                    </button>
+                    <div class="info">
+                        <h2 class="onehundredseventyfivethousandthreehundredtwentyfour ui heading size-heading_04">
+                            97,354</h2>
+                        <p class="livejob ui text size-body_medium_400">
+                            Công ty</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <button class="briefcase_one ui button primary_50_0 size-8xl fill round">
+                        <img
+                            src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_users_duotone_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=a8f7eef5e58af0fda2bc9f908a1c61b75233e69bf4e3e53043893e1a6ffc35f1&amp;X-Amz-SignedHeaders=host">
+                    </button>
+                    <div class="info">
+                        <h3 class="onehundredseventyfivethousandthreehundredtwentyfour ui heading size-heading_04">
+                            38,47,154</h3>
+                        <p class="livejob ui text size-body_medium_400">
+                            Người dùng</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <button class="briefcase_one ui button primary_50_0 size-8xl fill round">
+                        <img
+                            src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_briefcase_duotone.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=22f5833335f54a2725461c000e1246c2ca7e54072c385377f84ad28f959a64c5&amp;X-Amz-SignedHeaders=host">
+                    </button>
+                    <div class="info">
+                        <h4 class="onehundredseventyfivethousandthreehundredtwentyfour ui heading size-heading_04">
+                            7,532</h4>
+                        <p class="livejob ui text size-body_medium_400">
+                            Việc làm mới</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="columndanhschcn">
+                <div class="rowdanhschcng">
+                    <h2 class="danhschcng ui heading size-heading_01">
+                        Danh sách công việc</h2>
+                    <button class="flex-row-center-center xem_tt_c ui button primary_50_0 size-3xl outline round">
+                        <span>
+                            Xem tất cả</span>
+                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                            alt="Arrow Left" class="fisearch">
+                    </button>
+                </div>
+                <div class="listemployerslo">
+                    <div class="job">
+                        <div class="info-4">
+                            <button class="employerslogo ui button light_green_500 size-7xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c9088b6774255a1509bca0a259cb2e3cf49b58c0b497e9b5cb38f0a513d210c6&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <div class="heading-3">
+                                <div class="heading-9">
+                                    <p class="suniorux ui text size-body_xl_500">
+                                        Senior UX Designer</p>
+                                    <p class="badge ui text size-body_small_400">
+                                        Toàn thời gian</p>
+                                </div>
+                                <div class="info-10">
+                                    <div class="loaction">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_100.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8dbf1fc2cb02131600ba102f0c510bd50cd50d8dee657b39c9aaebc4532732c5&amp;X-Amz-SignedHeaders=host"
+                                            alt="Hà Nội" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            Hà Nội</p>
+                                    </div>
+                                    <div class="price">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_currency_dollar.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9304249726c5016c77a4cee9138c2bc3a8e1f5ca52204d1f5c67ff2bd1679730&amp;X-Amz-SignedHeaders=host"
+                                            alt="8 12tr" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            8 - 12tr</p>
+                                    </div>
+                                    <div class="price-1">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_calendar_blank_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=f53e05e4ceac6f794042e8a0ad3819a6b28ddd1ad65774028c6bd9fbbb861381&amp;X-Amz-SignedHeaders=host"
+                                            alt="Còn Lại 4 Ngày" class="h_ni_one">
+                                        <p class="cnli4ngy ui text size-body_small_400">
+                                            Còn lại 4 ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-1">
+                            <div class="iconbutton">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_bookmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e5a9574f8842b76eac931e6542ffdc68e5347efbd6d7ba371c405153c8b7805c&amp;X-Amz-SignedHeaders=host"
+                                    alt="Senior Ux" class="senior_ux">
+                            </div>
+                            <button
+                                class="flex-row-center-center ng_tuyn_ngay ui button primary_50_0 size-3xl fill round">
+                                <span>
+                                    Ứng tuyển Ngay</span>
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                    alt="Arrow Left" class="fisearch">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="info-4">
+                            <button class="employerslogo ui button light_green_500 size-7xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=a442e16cf044bd6cd7bb0bbf384f6f0d404a0d65f70b61dcc1c740a7e6d74a99&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <div class="heading-3">
+                                <div class="heading-9">
+                                    <p class="suniorux ui text size-body_xl_500">
+                                        Software Engineer</p>
+                                    <p class="badge ui text size-body_small_400">
+                                        Bán thời gian</p>
+                                </div>
+                                <div class="info-10">
+                                    <div class="loaction">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_100.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8dbf1fc2cb02131600ba102f0c510bd50cd50d8dee657b39c9aaebc4532732c5&amp;X-Amz-SignedHeaders=host"
+                                            alt="Hà Nội" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            Hà Nội</p>
+                                    </div>
+                                    <div class="price">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_currency_dollar.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9304249726c5016c77a4cee9138c2bc3a8e1f5ca52204d1f5c67ff2bd1679730&amp;X-Amz-SignedHeaders=host"
+                                            alt="8 12tr" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            9 - 15tr</p>
+                                    </div>
+                                    <div class="price-1">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_calendar_blank_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=f53e05e4ceac6f794042e8a0ad3819a6b28ddd1ad65774028c6bd9fbbb861381&amp;X-Amz-SignedHeaders=host"
+                                            alt="Còn Lại 4 Ngày" class="h_ni_one">
+                                        <p class="cnli4ngy ui text size-body_small_400">
+                                            Còn lại 7 ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-1">
+                            <div class="iconbutton">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_bookmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e5a9574f8842b76eac931e6542ffdc68e5347efbd6d7ba371c405153c8b7805c&amp;X-Amz-SignedHeaders=host"
+                                    alt="Senior Ux" class="senior_ux">
+                            </div>
+                            <button
+                                class="flex-row-center-center ng_tuyn_ngay ui button primary_50_0 size-3xl fill round">
+                                <span>
+                                    Ứng tuyển Ngay</span>
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                    alt="Arrow Left" class="fisearch">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="info-4">
+                            <button class="employerslogo ui button light_green_500 size-7xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_close.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=0d05625298feefbf5fb4ea3cdc3c1a7d0297e334bdfba6c8751e7268e76250c2&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <div class="heading-3">
+                                <div class="heading-9">
+                                    <p class="suniorux ui text size-body_xl_500">
+                                        Junior Graphic Designer</p>
+                                    <p class="badge ui text size-body_small_400">
+                                        Bán thời gian</p>
+                                </div>
+                                <div class="info-10">
+                                    <div class="loaction">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_100.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8dbf1fc2cb02131600ba102f0c510bd50cd50d8dee657b39c9aaebc4532732c5&amp;X-Amz-SignedHeaders=host"
+                                            alt="Hà Nội" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            Hà Nội</p>
+                                    </div>
+                                    <div class="price">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_currency_dollar.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9304249726c5016c77a4cee9138c2bc3a8e1f5ca52204d1f5c67ff2bd1679730&amp;X-Amz-SignedHeaders=host"
+                                            alt="8 12tr" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            10 - 12tr</p>
+                                    </div>
+                                    <div class="price-1">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_calendar_blank_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=f53e05e4ceac6f794042e8a0ad3819a6b28ddd1ad65774028c6bd9fbbb861381&amp;X-Amz-SignedHeaders=host"
+                                            alt="Còn Lại 4 Ngày" class="h_ni_one">
+                                        <p class="cnli4ngy ui text size-body_small_400">
+                                            Còn lại 5 ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-1">
+                            <div class="iconbutton">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_bookmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e5a9574f8842b76eac931e6542ffdc68e5347efbd6d7ba371c405153c8b7805c&amp;X-Amz-SignedHeaders=host"
+                                    alt="Senior Ux" class="senior_ux">
+                            </div>
+                            <button
+                                class="flex-row-center-center ng_tuyn_ngay ui button primary_50_0 size-3xl fill round">
+                                <span>
+                                    Ứng tuyển Ngay</span>
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                    alt="Arrow Left" class="fisearch">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="info-4">
+                            <button class="employerslogo ui button light_green_500 size-7xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_68x68.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=d0542b33b23b58d0a6e68079a211d348f2d1c4a8cb6e73b6d21fead86c26710a&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <div class="heading-3">
+                                <div class="heading-9">
+                                    <p class="suniorux ui text size-body_xl_500">
+                                        Product Designer</p>
+                                    <p class="badge ui text size-body_small_400">
+                                        Toàn thời gian</p>
+                                </div>
+                                <div class="info-10">
+                                    <div class="loaction">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_100.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8dbf1fc2cb02131600ba102f0c510bd50cd50d8dee657b39c9aaebc4532732c5&amp;X-Amz-SignedHeaders=host"
+                                            alt="Hà Nội" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            TP. Hồ Chí Minh</p>
+                                    </div>
+                                    <div class="price">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_currency_dollar.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9304249726c5016c77a4cee9138c2bc3a8e1f5ca52204d1f5c67ff2bd1679730&amp;X-Amz-SignedHeaders=host"
+                                            alt="8 12tr" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            15 - 20tr</p>
+                                    </div>
+                                    <div class="price-1">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_calendar_blank_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=f53e05e4ceac6f794042e8a0ad3819a6b28ddd1ad65774028c6bd9fbbb861381&amp;X-Amz-SignedHeaders=host"
+                                            alt="Còn Lại 4 Ngày" class="h_ni_one">
+                                        <p class="cnli4ngy ui text size-body_small_400">
+                                            Còn lại 3 ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-1">
+                            <div class="iconbutton">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_bookmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e5a9574f8842b76eac931e6542ffdc68e5347efbd6d7ba371c405153c8b7805c&amp;X-Amz-SignedHeaders=host"
+                                    alt="Senior Ux" class="senior_ux">
+                            </div>
+                            <button
+                                class="flex-row-center-center ng_tuyn_ngay ui button primary_50_0 size-3xl fill round">
+                                <span>
+                                    Ứng tuyển Ngay</span>
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                    alt="Arrow Left" class="fisearch">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="info-4">
+                            <button class="employerslogo ui button light_green_500 size-7xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_facebook.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=aeb385d726bbf4f5c50c87e0d6fd6bb951377b7230fe202b72baf2483a84f56c&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <div class="heading-3">
+                                <div class="heading-9">
+                                    <p class="suniorux ui text size-body_xl_500">
+                                        Software Development</p>
+                                    <p class="badge ui text size-body_small_400">
+                                        Toàn thời gian</p>
+                                </div>
+                                <div class="info-10">
+                                    <div class="loaction">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_100.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8dbf1fc2cb02131600ba102f0c510bd50cd50d8dee657b39c9aaebc4532732c5&amp;X-Amz-SignedHeaders=host"
+                                            alt="Hà Nội" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            TP. Hồ Chí Minh</p>
+                                    </div>
+                                    <div class="price">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_currency_dollar.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9304249726c5016c77a4cee9138c2bc3a8e1f5ca52204d1f5c67ff2bd1679730&amp;X-Amz-SignedHeaders=host"
+                                            alt="8 12tr" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            12 - 15tr</p>
+                                    </div>
+                                    <div class="price-1">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_calendar_blank_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=f53e05e4ceac6f794042e8a0ad3819a6b28ddd1ad65774028c6bd9fbbb861381&amp;X-Amz-SignedHeaders=host"
+                                            alt="Còn Lại 4 Ngày" class="h_ni_one">
+                                        <p class="cnli4ngy ui text size-body_small_400">
+                                            Còn lại 1 ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-1">
+                            <div class="iconbutton">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_bookmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e5a9574f8842b76eac931e6542ffdc68e5347efbd6d7ba371c405153c8b7805c&amp;X-Amz-SignedHeaders=host"
+                                    alt="Senior Ux" class="senior_ux">
+                            </div>
+                            <button
+                                class="flex-row-center-center ng_tuyn_ngay ui button primary_50_0 size-3xl fill round">
+                                <span>
+                                    Ứng tuyển Ngay</span>
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                    alt="Arrow Left" class="fisearch">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="info-4">
+                            <button class="employerslogo ui button light_green_500 size-7xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_red_500.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=aa0e00ceedd7031ec770fd10d863bd5ff69421e33906fb91d5deeb4a5729149a&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <div class="heading-3">
+                                <div class="heading-9">
+                                    <p class="suniorux ui text size-body_xl_500">
+                                        Interaction Designer</p>
+                                    <p class="badge ui text size-body_small_400">
+                                        Toàn thời gian</p>
+                                </div>
+                                <div class="info-10">
+                                    <div class="loaction">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_100.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8dbf1fc2cb02131600ba102f0c510bd50cd50d8dee657b39c9aaebc4532732c5&amp;X-Amz-SignedHeaders=host"
+                                            alt="Hà Nội" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            TP. Hồ Chí Minh</p>
+                                    </div>
+                                    <div class="price">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_currency_dollar.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9304249726c5016c77a4cee9138c2bc3a8e1f5ca52204d1f5c67ff2bd1679730&amp;X-Amz-SignedHeaders=host"
+                                            alt="8 12tr" class="h_ni_one">
+                                        <p class="hni ui text size-body_small_400">
+                                            8 - 15tr</p>
+                                    </div>
+                                    <div class="price-1">
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_calendar_blank_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=f53e05e4ceac6f794042e8a0ad3819a6b28ddd1ad65774028c6bd9fbbb861381&amp;X-Amz-SignedHeaders=host"
+                                            alt="Còn Lại 4 Ngày" class="h_ni_one">
+                                        <p class="cnli4ngy ui text size-body_small_400">
+                                            Còn lại 1 ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-1">
+                            <div class="iconbutton">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_bookmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e5a9574f8842b76eac931e6542ffdc68e5347efbd6d7ba371c405153c8b7805c&amp;X-Amz-SignedHeaders=host"
+                                    alt="Senior Ux" class="senior_ux">
+                            </div>
+                            <button
+                                class="flex-row-center-center ng_tuyn_ngay ui button primary_50_0 size-3xl fill round">
+                                <span>
+                                    Ứng tuyển Ngay</span>
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                    alt="Arrow Left" class="fisearch">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex-col-center-center column_one">
+                <div class="columndanhschcn">
+                    <div class="heading-1">
+                        <div class="columndanhschdo">
+                            <h2 class="danhschdoanh ui heading size-heading_01">
+                                Danh sách doanh nghiệp</h2>
+                            <h3 class="danhschdoanh-1 ui heading size-heading_01">
+                                Danh sách doanh nghiệp</h3>
+                        </div>
+                        <div class="columnarrowleft-1">
+                            <div class="icons">
+                                <button class="arrowleft_nine ui button primary_50_0 size-2xl fill round">
+                                    <img
+                                        src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                                </button>
+                                <button class="arrowleft ui button primary_50_0 size-2xl fill round">
+                                    <img
+                                        src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                                </button>
+                            </div>
+                            <div class="rowarrowleft">
+                                <button id="slider1-control-prev"
+                                    class="arrowleft_nine ui button primary_50_0 size-2xl fill round" tabindex="0"
+                                    aria-label="Previous slide" aria-controls="swiper-wrapper-106caad812327a1f3">
+                                    <img
+                                        src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                                </button>
+                                <button id="slider1-control-next"
+                                    class="arrowleft ui button primary_50_0 size-2xl fill round" tabindex="0"
+                                    aria-label="Next slide" aria-controls="swiper-wrapper-106caad812327a1f3">
+                                    <img
+                                        src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider1" class="slider1 swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+                        style="max-width: 1324.06px; max-height: 428px;">
+                        <div class="swiper-wrapper" id="swiper-wrapper-106caad812327a1f3" aria-live="polite"
+                            style="cursor: grab;">
+                            <div class="gridglobe_one swiper-slide swiper-slide-active" role="group" aria-label="1 / 3"
+                                data-swiper-slide-index="0" style="width: 1316px;">
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button pink_400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_globe.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e487b4d2350a8798ed05492f1ebc3153f8ca2ee7edddf07d3b6295658092ac80&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-19">
+                                            <div class="rowcall_one">
+                                                <p class="upwork ui text size-body_large_500">
+                                                    Dribbble</p>
+                                                <button
+                                                    class="flex-row-center-center badge-6 ui button red_50 size-xs fill">
+                                                    Nổi bật</button>
+                                            </div>
+                                            <div class="loaction-6">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-1">
+                                        <button class="globe_one ui button light_green_500 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c9088b6774255a1509bca0a259cb2e3cf49b58c0b497e9b5cb38f0a513d210c6&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-20">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Upwork</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employer-1">
+                                    <div class="company">
+                                        <button class="globe_one ui button gray_scale_50 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_pink_600.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=7cfd88eb7fd8bbfad4c82cb171457da4ebacca92821f0f68576efce8ebfad74c&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Slack</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_500_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-1">
+                                        <button class="globe_one ui button blue_800 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_56x56.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=ac52ca00e343dbd2fff95df9907331f00e1f3959beeebaa768e0932b431d9e82&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-20">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Freepik</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-4">
+                                        <button class="globe_one ui button blue_a400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_facebook.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=aeb385d726bbf4f5c50c87e0d6fd6bb951377b7230fe202b72baf2483a84f56c&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-23">
+                                            <div class="rowfacebook_two">
+                                                <p class="upwork ui text size-body_large_500">
+                                                    Facebook</p>
+                                                <button
+                                                    class="flex-row-center-center badge-6 ui button red_50 size-xs fill">
+                                                    Nổi bật</button>
+                                            </div>
+                                            <div class="loaction-6">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button red_400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_68x68.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=d0542b33b23b58d0a6e68079a211d348f2d1c4a8cb6e73b6d21fead86c26710a&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-24">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Udemy</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button gray_scale_50 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_light_blue_500.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=da5e1f8d49d92d9273991ee9690901277ab6656a4d2d72baba5f8010513a7caa&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Microsoft</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button deep_orange_a400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_user.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=6f8e892627b5db77934fa2dce36df8feb2f5bb90fa5ce384c1bddfc278e4a179&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Reddit</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                            </div>
+                            <div class="gridglobe_one swiper-slide swiper-slide-next" cloned="" role="group"
+                                aria-label="2 / 3" data-swiper-slide-index="1" style="width: 1316px;">
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button pink_400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_globe.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e487b4d2350a8798ed05492f1ebc3153f8ca2ee7edddf07d3b6295658092ac80&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-19">
+                                            <div class="rowcall_one">
+                                                <p class="upwork ui text size-body_large_500">
+                                                    Dribbble</p>
+                                                <button
+                                                    class="flex-row-center-center badge-6 ui button red_50 size-xs fill">
+                                                    Nổi bật</button>
+                                            </div>
+                                            <div class="loaction-6">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-1">
+                                        <button class="globe_one ui button light_green_500 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c9088b6774255a1509bca0a259cb2e3cf49b58c0b497e9b5cb38f0a513d210c6&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-20">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Upwork</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employer-1">
+                                    <div class="company">
+                                        <button class="globe_one ui button gray_scale_50 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_pink_600.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=7cfd88eb7fd8bbfad4c82cb171457da4ebacca92821f0f68576efce8ebfad74c&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Slack</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_500_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-1">
+                                        <button class="globe_one ui button blue_800 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_56x56.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=ac52ca00e343dbd2fff95df9907331f00e1f3959beeebaa768e0932b431d9e82&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-20">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Freepik</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-4">
+                                        <button class="globe_one ui button blue_a400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_facebook.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=aeb385d726bbf4f5c50c87e0d6fd6bb951377b7230fe202b72baf2483a84f56c&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-23">
+                                            <div class="rowfacebook_two">
+                                                <p class="upwork ui text size-body_large_500">
+                                                    Facebook</p>
+                                                <button
+                                                    class="flex-row-center-center badge-6 ui button red_50 size-xs fill">
+                                                    Nổi bật</button>
+                                            </div>
+                                            <div class="loaction-6">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button red_400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_68x68.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=d0542b33b23b58d0a6e68079a211d348f2d1c4a8cb6e73b6d21fead86c26710a&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-24">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Udemy</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button gray_scale_50 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_light_blue_500.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=da5e1f8d49d92d9273991ee9690901277ab6656a4d2d72baba5f8010513a7caa&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Microsoft</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button deep_orange_a400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_user.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=6f8e892627b5db77934fa2dce36df8feb2f5bb90fa5ce384c1bddfc278e4a179&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Reddit</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                            </div>
+                            <div class="gridglobe_one swiper-slide" cloned="" role="group" aria-label="3 / 3"
+                                data-swiper-slide-index="2" style="width: 1316px;">
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button pink_400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_globe.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e487b4d2350a8798ed05492f1ebc3153f8ca2ee7edddf07d3b6295658092ac80&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-19">
+                                            <div class="rowcall_one">
+                                                <p class="upwork ui text size-body_large_500">
+                                                    Dribbble</p>
+                                                <button
+                                                    class="flex-row-center-center badge-6 ui button red_50 size-xs fill">
+                                                    Nổi bật</button>
+                                            </div>
+                                            <div class="loaction-6">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-1">
+                                        <button class="globe_one ui button light_green_500 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c9088b6774255a1509bca0a259cb2e3cf49b58c0b497e9b5cb38f0a513d210c6&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-20">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Upwork</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employer-1">
+                                    <div class="company">
+                                        <button class="globe_one ui button gray_scale_50 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_pink_600.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=7cfd88eb7fd8bbfad4c82cb171457da4ebacca92821f0f68576efce8ebfad74c&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Slack</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_500_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-1">
+                                        <button class="globe_one ui button blue_800 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_56x56.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=ac52ca00e343dbd2fff95df9907331f00e1f3959beeebaa768e0932b431d9e82&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-20">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Freepik</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company-4">
+                                        <button class="globe_one ui button blue_a400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_facebook.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=aeb385d726bbf4f5c50c87e0d6fd6bb951377b7230fe202b72baf2483a84f56c&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-23">
+                                            <div class="rowfacebook_two">
+                                                <p class="upwork ui text size-body_large_500">
+                                                    Facebook</p>
+                                                <button
+                                                    class="flex-row-center-center badge-6 ui button red_50 size-xs fill">
+                                                    Nổi bật</button>
+                                            </div>
+                                            <div class="loaction-6">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button red_400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_gray_white_68x68.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=d0542b33b23b58d0a6e68079a211d348f2d1c4a8cb6e73b6d21fead86c26710a&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-24">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Udemy</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    Hà Nội</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button gray_scale_50 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_employers_logo_light_blue_500.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=da5e1f8d49d92d9273991ee9690901277ab6656a4d2d72baba5f8010513a7caa&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Microsoft</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                                <div class="employerfalse">
+                                    <div class="company">
+                                        <button class="globe_one ui button deep_orange_a400 size-4xl fill round">
+                                            <img
+                                                src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_user.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=6f8e892627b5db77934fa2dce36df8feb2f5bb90fa5ce384c1bddfc278e4a179&amp;X-Amz-SignedHeaders=host">
+                                        </button>
+                                        <div class="info-21">
+                                            <p class="upwork ui text size-body_large_500">
+                                                Reddit</p>
+                                            <div class="loaction-7">
+                                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_fi_map_pin_blue_gray_300_01.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=e30cc43113dac0f8df577e46c044d88bcc0843a144032c00ce3ae40379a2a9e4&amp;X-Amz-SignedHeaders=host"
+                                                    alt="Fimappin" class="fimappin_one">
+                                                <p class="hni-6 ui text size-body_small_400">
+                                                    TP. Hồ Chí Minh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="flex-row-center-center button-7 ui button primary_50_0 size-3xl fill round">
+                                        Xem Thông tin </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="columndanhschcn">
+                <div class="heading-1">
+                    <div class="columnblogit">
+                        <h2 class="blogit_one ui heading size-heading_01">
+                            Blog IT</h2>
+                        <h3 class="blogit_two ui heading size-heading_01">
+                            Blog IT</h3>
+                    </div>
+                    <div class="columnarrowleft">
+                        <div class="arrow">
+                            <button class="arrowleft_nine ui button primary_50_1 size-2xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <button class="arrowleft ui button primary_50_1 size-2xl fill round">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                        </div>
+                        <div class="rowarrowleft">
+                            <button id="slider-control-prev"
+                                class="arrowleft_nine ui button primary_50_1 size-2xl fill round" tabindex="0"
+                                aria-label="Previous slide" aria-controls="swiper-wrapper-e96f979155e55d39">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                            <button id="slider-control-next"
+                                class="arrowleft ui button primary_50_1 size-2xl fill round" tabindex="0"
+                                aria-label="Next slide" aria-controls="swiper-wrapper-e96f979155e55d39">
+                                <img
+                                    src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="slider" class="slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+                    style="max-width: 1310px; max-height: 518px;">
+                    <div class="swiper-wrapper" id="swiper-wrapper-e96f979155e55d39" aria-live="polite"
+                        style="cursor: grab;">
+                        <div class="dhi-group swiper-slide swiper-slide-active" role="group" aria-label="1 / 9"
+                            data-swiper-slide-index="0" style="width: 432.667px;">
+                            <div class="blog">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8e615d6166a57807865f30aece4e37e4deb6ff5fe31741baf70c509825b0b078&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Ngành IT cần những kỹ năng gì để thành công?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Thành công trong ngành IT đòi hỏi cả kỹ năng kỹ thuật và kỹ năng mềm. Các kỹ
+                                            năng kỹ thuật cơ bản bao gồm lập trình, quản lý...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide swiper-slide-next" role="group" aria-label="2 / 9"
+                            data-swiper-slide-index="1" style="width: 432.667px;">
+                            <div class="blog-1">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image_276x376.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=4f41b833137e0943119d9df948c7c324c571fb952036b6347735b929629e5c5f&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Những chứng chỉ nào có giá trị trong ngành IT?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Một số chứng chỉ nổi bật bao gồm: CompTIA A+ cho kiến thức cơ bản về IT, AWS
+                                            Certified Solutions Architect cho điện toán đám mây...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" role="group" aria-label="3 / 9" data-swiper-slide-index="2"
+                            style="width: 432.667px;">
+                            <div class="blog">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image_1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8264926648a7107f0ba0f19efe6d05432b7e81f6ef8b2e68fc63317c0486533d&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Ngành IT có lộ trình phát triển nghề nghiệp ra sao?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Ngành IT có nhiều lộ trình phát triển tùy thuộc vào chuyên môn và mục tiêu
+                                            cá nhân. Ví dụ, lập trình viên có thể phát triển lên vị trí Tech Lead...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" cloned="" role="group" aria-label="4 / 9"
+                            data-swiper-slide-index="3" style="width: 432.667px;">
+                            <div class="blog">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8e615d6166a57807865f30aece4e37e4deb6ff5fe31741baf70c509825b0b078&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Ngành IT cần những kỹ năng gì để thành công?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Thành công trong ngành IT đòi hỏi cả kỹ năng kỹ thuật và kỹ năng mềm. Các kỹ
+                                            năng kỹ thuật cơ bản bao gồm lập trình, quản lý...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" cloned="" role="group" aria-label="5 / 9"
+                            data-swiper-slide-index="4" style="width: 432.667px;">
+                            <div class="blog-1">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image_276x376.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=4f41b833137e0943119d9df948c7c324c571fb952036b6347735b929629e5c5f&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Những chứng chỉ nào có giá trị trong ngành IT?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Một số chứng chỉ nổi bật bao gồm: CompTIA A+ cho kiến thức cơ bản về IT, AWS
+                                            Certified Solutions Architect cho điện toán đám mây...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" cloned="" role="group" aria-label="6 / 9"
+                            data-swiper-slide-index="5" style="width: 432.667px;">
+                            <div class="blog">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image_1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8264926648a7107f0ba0f19efe6d05432b7e81f6ef8b2e68fc63317c0486533d&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Ngành IT có lộ trình phát triển nghề nghiệp ra sao?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Ngành IT có nhiều lộ trình phát triển tùy thuộc vào chuyên môn và mục tiêu
+                                            cá nhân. Ví dụ, lập trình viên có thể phát triển lên vị trí Tech Lead...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" cloned="" role="group" aria-label="7 / 9"
+                            data-swiper-slide-index="6" style="width: 432.667px;">
+                            <div class="blog">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8e615d6166a57807865f30aece4e37e4deb6ff5fe31741baf70c509825b0b078&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Ngành IT cần những kỹ năng gì để thành công?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Thành công trong ngành IT đòi hỏi cả kỹ năng kỹ thuật và kỹ năng mềm. Các kỹ
+                                            năng kỹ thuật cơ bản bao gồm lập trình, quản lý...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" cloned="" role="group" aria-label="8 / 9"
+                            data-swiper-slide-index="7" style="width: 432.667px;">
+                            <div class="blog-1">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image_276x376.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=4f41b833137e0943119d9df948c7c324c571fb952036b6347735b929629e5c5f&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Những chứng chỉ nào có giá trị trong ngành IT?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Một số chứng chỉ nổi bật bao gồm: CompTIA A+ cho kiến thức cơ bản về IT, AWS
+                                            Certified Solutions Architect cho điện toán đám mây...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dhi-group swiper-slide" cloned="" role="group" aria-label="9 / 9"
+                            data-swiper-slide-index="8" style="width: 432.667px;">
+                            <div class="blog">
+                                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_image_1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8264926648a7107f0ba0f19efe6d05432b7e81f6ef8b2e68fc63317c0486533d&amp;X-Amz-SignedHeaders=host"
+                                    alt="Image" class="image_one">
+                                <div class="columnpraesent-1">
+                                    <div class="info-16">
+                                        <p class="praesent ui text size-body_xl_500">
+                                            Ngành IT có lộ trình phát triển nghề nghiệp ra sao?</p>
+                                        <p class="donecpurus ui text size-body_small_400">
+                                            Ngành IT có nhiều lộ trình phát triển tùy thuộc vào chuyên môn và mục tiêu
+                                            cá nhân. Ví dụ, lập trình viên có thể phát triển lên vị trí Tech Lead...</p>
+                                    </div>
+                                    <div class="rowcall_one">
+                                        <p class="readmore ui text size-body_medium_500">
+                                            Đọc thêm</p>
+                                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=c2c02dfbaff5f93db295a760a574cb44d3b249d8ba41eb68e99393f614798238&amp;X-Amz-SignedHeaders=host"
+                                            alt="Arrowleft" class="senior_ux">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footerfooterlog">
+        <div class="row_seven">
+            <div class="row_six">
+                <div class="rowfooterlogo">
+                    <div class="columnfooterlog">
+                        <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_footer_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=2d8af839dc9baf70777b67d9559c4ee1b2b8300b7d764322294cdff9b121f11b&amp;X-Amz-SignedHeaders=host"
+                            alt="Footerlogo" class="footerlogo_one">
+                        <div class="column843345678">
+                            <p class="class-8433456789_one ui text size-body_large_500">
+                                +84 33456789</p>
+                            <div class="columnlinh">
+                                <p class="linh ui text size-body_large_400">
+                                    Liên hệ</p>
+                                <a href="#" class="class-6391elginst-link">
+                                    <p class="class-6391elginst ui text size-body_small_400">
+                                        6391 Elgin St. Celina, Delaware 10299, New York, United States of America</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowvitseek">
+                        <div class="columnvitseek">
+                            <p class="vitseek ui text size-body_xl_500">
+                                Về Itseek</p>
+                            <ul class="columntrli">
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Trở lại</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="footerlink">
+                                            <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_arrowleft_gray_white.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=00de352362e40085fcd6e7dbcb58896aa173ebba084b2ac7c4981909697dc0ef&amp;X-Amz-SignedHeaders=host"
+                                                alt="Arrowleft" class="user_one">
+                                            <p class="linh_one ui text size-body_medium_500">
+                                                Liên hệ</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Đánh giá</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Tin tức</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="columnvitseek">
+                            <p class="vitseek ui text size-body_xl_500">
+                                Ứng viên</p>
+                            <ul class="columntrli">
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Công việc</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Nhà tuyển dụng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Tổng quan ứng viên</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Việc làm đã lưu</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="columnvitseek">
+                            <p class="vitseek ui text size-body_xl_500">
+                                Nhà tuyển dụng</p>
+                            <ul class="columntrli">
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Đăng việc làm</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Duyệt công việc</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Bảng điều khiển</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Ứng dụng</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="columnhtr">
+                            <p class="vitseek ui text size-body_xl_500">
+                                Hỗ trợ</p>
+                            <ul class="columntrli">
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Câu hỏi thường gặp</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Chính sách bảo mật</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="trli ui text size-body_medium_400">
+                                            Điều khoản và điều kiện</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="row2024itseek">
+                <p class="class-2024itseek ui text size-body_small_400">
+                    @ 2024 Itseek - Thực hiện bởi Nguyễn Hồng Phong</p>
+                <div class="rowfacebook_one">
+                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_facebook_gray_500.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=9967c6c34493999de8a71707c75d8d4c1283345740de371d89da595efc910bcd&amp;X-Amz-SignedHeaders=host"
+                        alt="Facebook" class="facebook_one">
+                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_user_gray_500.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=8a2ded25cfe5ae6bafdf7efb7bca97b5014acaf61b6a69658d414d4d79a73072&amp;X-Amz-SignedHeaders=host"
+                        alt="User" class="user_one">
+                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_instagram_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=4728b674dbe00eaaf6129b5365d8536ffed475d877f59eab017ccd7aa5495c4b&amp;X-Amz-SignedHeaders=host"
+                        alt="Instagramone" class="user_one">
+                    <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/673800457d801400234223ec/6738012adaa3f400233ae3b8/6738012adaa3f400233ae3bd/appSource/images/img_twitter_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241116%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241116T031353Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=76957980f18823d71279ce16e39ba706fc99a2a8342722265bd74b3b5d6e96ed&amp;X-Amz-SignedHeaders=host"
+                        alt="Twitterone" class="user_one">
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
