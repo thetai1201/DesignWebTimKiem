@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doanh nghiệp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="flex flex-col bg-white">
+        <div class="flex shrink-0 self-end max-w-full h-12 bg-gray-100 w-[1920px]"></div>
+        <nav
+            class="flex flex-col justify-center items-center px-16 py-3 mt-56 w-full text-sm leading-none bg-gray-100 max-w-[1920px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+            <div class="flex flex-wrap gap-5 justify-between max-w-full w-[1320px]">
+                <ul class="flex gap-6 my-auto text-gray-500">
+                    <li class="grow text-gray-500"><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Việc làm</a></li>
+                    <li class="font-medium text-blue-700"><a href="#" aria-current="page">Doanh nghiệp</a></li>
+                    <li><a href="#">Blog IT</a></li>
+                </ul>
+                <div class="flex gap-2 font-medium text-zinc-900">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9db5717c3cef4d4edfe29e7ec52c306ee32fad9ca8bafb1abcfe41cde7633cbe?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                        alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                    <a href="tel:+84 33456789" class="my-auto basis-auto">+84 33456789</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex flex-wrap gap-5 justify-between self-center mt-5 w-full max-w-[1322px] max-md:max-w-full">
+            <div class="flex flex-wrap gap-8 text-base text-gray-400">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/47e8dcde21ea38af29fab7a7393bbea713dddd79f49d17096d025290941d1c5a?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                    alt="Company logo" class="object-contain shrink-0 my-auto max-w-full aspect-[2.76] w-[116px]" />
+                <form
+                    class="flex flex-wrap flex-auto gap-3 px-7 py-3.5 rounded-md border border-solid bg-zinc-300 bg-opacity-0 border-zinc-200 max-md:px-5">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3f1205c4e3952ff56cc646c0c3e09e7d246151e6042269c524301150e8c594c?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                        alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                    <label for="search" class="sr-only">Tìm kiếm theo tên việc làm, doanh nghiệp</label>
+                    <input type="search" id="search" class="flex-auto max-md:max-w-full"
+                        placeholder="Tìm kiếm theo tên việc làm, doanh nghiệp" />
+                </form>
+            </div>
+            <div class="flex gap-6 self-start">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f8deff7186c6f03216c1dd95c7442f7e1a766441c082c7c930a0cb808ec3d4f?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                    alt="" class="object-contain shrink-0 my-auto aspect-square w-[25px]" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f048df5fa8c3d8ee8f695136dfc007d1cb71f9f3bc460a6ede1c953810f4c543?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                    alt="User profile" class="object-contain shrink-0 w-12 aspect-square" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section
+            class="flex flex-wrap gap-10 justify-between items-center px-72 py-6 mt-5 w-full bg-gray-100 max-w-[1920px] max-md:px-5 max-md:max-w-full">
+            <h1 class="self-stretch my-auto text-lg font-medium leading-loose text-center text-zinc-900">
+                Tìm kiếm doanh nghiệp
+            </h1>
+            <nav aria-label="Breadcrumb"
+                class="flex gap-2 items-start self-stretch my-auto text-sm leading-none text-gray-500">
+                <a href="#">Trang chủ</a>
+                <span>/</span>
+                <span class="text-zinc-900">Doanh nghiệp</span>
+            </nav>
+        </section>
+
+        <section
+            class="flex flex-col items-center px-16 pb-8 w-full text-base bg-gray-100 max-w-[1920px] max-md:px-5 max-md:max-w-full">
+            <form
+                class="flex flex-wrap gap-5 justify-between px-2.5 py-3 max-w-full bg-white rounded-lg border border-gray-100 border-solid shadow-2xl w-[1320px]">
+                <div class="flex flex-wrap text-gray-400">
+                    <div class="flex gap-10 px-5 py-1 bg-white rounded-md">
+                        <div class="flex gap-3 my-auto">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/94fd2988c0851707be41a7e9cceeb18fc4297fd8f3724b9ec33dc4ed420192c8?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                            <label for="keyword" class="basis-auto">Nhập từ khóa</label>
+                        </div>
+                        <input type="text" id="keyword"
+                            class="shrink-0 h-12 bg-gray-100 border border-gray-100 border-solid w-[-17px]" />
+                    </div>
+                    <div class="flex gap-10 px-5 py-1 bg-white rounded-md">
+                        <div class="flex gap-3 my-auto">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c65ae5431bedc84c3b190008148325aa0ea3c58d04f3c1ae210df2666845f20d?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                            <label for="location">Địa điểm</label>
+                        </div>
+                        <input type="text" id="location"
+                            class="shrink-0 h-12 bg-gray-100 border border-gray-100 border-solid w-[-17px]" />
+                    </div>
+                    <div class="flex gap-10 px-4 py-4 bg-white rounded-md">
+                        <div class="flex gap-3">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/97eedb3733e910e39687b768c898afc1ed0515f616e12b5ad11a3330cab11cd5?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                            <label for="type">Hình thức</label>
+                        </div>
+                        <select id="type" class="appearance-none bg-transparent">
+                            <option value="">Select type</option>
+                        </select>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f9f16392e023271f3bb5bc8b47d5d4a921072a1a7a33ee5c97e900262fc3eeb?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                    </div>
+                </div>
+                <button type="submit"
+                    class="gap-3 self-stretch px-8 py-4 font-semibold text-white capitalize bg-blue-700 rounded max-md:px-5">
+                    Tìm kiếm
+                </button>
+            </form>
+        </section>
+
+        <section class="flex flex-col self-center mt-7 max-w-full w-[1320px]">
+            <article
+                class="flex overflow-hidden flex-wrap gap-5 justify-between py-8 pr-16 pl-8 w-full rounded-xl border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 justify-center items-center">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-pink-500 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ea1f7ffd98f48aaf33fee105b33e2f3c534f38483fd9a85d223eed04e0838776?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Dribbble logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto min-w-[240px]">
+                        <div class="flex gap-2 items-center self-start font-medium">
+                            <h2 class="self-stretch my-auto text-lg leading-loose text-gray-800">
+                                Dribbble
+                            </h2>
+                            <span
+                                class="gap-2.5 self-stretch px-3 py-1 my-auto text-sm leading-none text-red-500 bg-rose-50 rounded-[52px]">
+                                Nổi bật
+                            </span>
+                        </div>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none text-gray-500">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0982e664b976e60274e3dd5feed6ea366a8955e8da6e2668ee5af511468f5233?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Hà Nội</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9af792453a95d9edb89e9e3cf3838fa61f83a619afc7d32fa3ecf1c9cf7e6839?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">
+                                    Bán thời gian, Toàn thời gian
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a1f0413750dc4d18183b31923ea88ca2824998a1640ab5f220a37cb95909a58?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex overflow-hidden flex-wrap gap-5 justify-between py-8 pr-16 pl-8 mt-6 w-full bg-white rounded-xl border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 justify-center items-center">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-gray-800 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a234b2e63b30b07141b9a9ec0b9e0434a21100053681cc1b17c3e23e0995be51?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Apple logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto">
+                        <div class="flex gap-2 items-center self-start font-medium">
+                            <h2 class="self-stretch my-auto text-lg leading-loose text-zinc-900">
+                                Apple
+                            </h2>
+                            <span
+                                class="gap-2.5 self-stretch px-3 py-1 my-auto text-sm leading-none text-red-500 bg-rose-50 rounded-[52px]">
+                                Nổi bật
+                            </span>
+                        </div>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none text-gray-500">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0982e664b976e60274e3dd5feed6ea366a8955e8da6e2668ee5af511468f5233?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Hà Nội</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc63792a15bf7f9f26aa56a20205e761f24f0e51198ab70206a76e5c853f68a1?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Toàn thời gian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/961dfdfb080a49ee868f8dffcdf628b1fe5e03d316fd936ed9dadd7edf394b32?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex overflow-hidden flex-wrap gap-5 justify-between py-8 pr-16 pl-8 mt-6 w-full bg-white rounded-xl border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 justify-center items-center">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-black rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f880a45bd75439b2b4a0c6824d742e9253706fdab873866f213af40f4b63fed?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Figma logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose whitespace-nowrap text-zinc-900">
+                            Figma
+                        </h2>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none text-gray-500">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0982e664b976e60274e3dd5feed6ea366a8955e8da6e2668ee5af511468f5233?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Hà Nội</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f347b042b0a63a976d68448171c123806f08de35fb5714d0064062b638aaac7d?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Bán thời gian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a1f0413750dc4d18183b31923ea88ca2824998a1640ab5f220a37cb95909a58?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex flex-wrap gap-10 justify-between items-center p-8 mt-6 w-full bg-white rounded-lg border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 items-center self-stretch my-auto min-w-[240px]">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-red-500 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/87ccf98bc53b33107a34fdea4ac91e7a5ee7b9cf702327ace526b47961011ceb?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Udemy logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose text-gray-800 whitespace-nowrap">
+                            Udemy
+                        </h2>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none text-gray-500">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc9e481840922b4c2d0c3aa07ebf9368a384853a4d40272352336fd77ba28248?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Hà Nội</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e52a7fd70a5664395a491b667b7cff9e22d1f5394a46a133112960687d75801c?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Thực tập</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start self-stretch my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a1f0413750dc4d18183b31923ea88ca2824998a1640ab5f220a37cb95909a58?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex overflow-hidden flex-wrap gap-5 justify-between py-8 pr-16 pl-8 mt-6 w-full bg-white rounded-xl border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 justify-center items-center">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-gray-100 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bc0c4dccc6c4972a1de2525307149f57136e71dd5cb61c56e16285b4b856086?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Microsoft logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose text-gray-800 whitespace-nowrap">
+                            Microsoft
+                        </h2>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto text-gray-400">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0982e664b976e60274e3dd5feed6ea366a8955e8da6e2668ee5af511468f5233?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">TP. Hồ Chí Minh</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto text-gray-500">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f4bf5837ae3cf4440b91de95e59bc2fc656bafbe0dae53d2ef5e6649fb3abb5c?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Linh hoạt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/961dfdfb080a49ee868f8dffcdf628b1fe5e03d316fd936ed9dadd7edf394b32?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex flex-wrap gap-10 justify-between items-center p-8 mt-6 w-full rounded-xl border border-blue-700 border-solid shadow-2xl max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 items-center self-stretch my-auto min-w-[240px]">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-lime-500 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1cbdc014e7712bd4cbcc7fc7dc1a0b9f3701b71b432ef22d5df84e637f65897a?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Upwork logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose text-gray-800 whitespace-nowrap">
+                            Upwork
+                        </h2>
+                        <div class="flex gap-4 items-center mt-2.5 text-sm leading-none text-gray-500">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc9e481840922b4c2d0c3aa07ebf9368a384853a4d40272352336fd77ba28248?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Hà Nội</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/41c69b1d31cce2188cd622eb995ad914ac1cfd26d48f30e58fa60dd9d2c78f56?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Làm việc từ xa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start self-stretch my-auto">
+                    <button class="flex gap-2.5 items-center p-3 w-12 h-12 bg-gray-100 rounded-md"
+                        aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b4767e2b40c0777b75f873d86494384cbcab0d537e1b8642fa79f777b3bcd49?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-white capitalize bg-blue-700 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72c910bdc0ab047ea5955f38a3ad60282ede593a9cd52829af6c667f07736419?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex flex-wrap gap-10 justify-between items-center p-8 mt-6 w-full bg-white rounded-lg border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 items-center self-stretch my-auto min-w-[240px]">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-blue-600 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/81649b89ea0d65ebc895d78d41e29824042587a809c82810b2f8a01509a0f4be?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Facebook logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto min-w-[240px]">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose whitespace-nowrap text-zinc-900">
+                            Facebook
+                        </h2>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto text-gray-400">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc9e481840922b4c2d0c3aa07ebf9368a384853a4d40272352336fd77ba28248?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">TP. Hồ Chí Minh</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto text-gray-500">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc24dcd9668522b75e366eedf0fe5dee1548f80de9cca55eaefa7eacd6415a54?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Làm việc từ xa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start self-stretch my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/961dfdfb080a49ee868f8dffcdf628b1fe5e03d316fd936ed9dadd7edf394b32?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex flex-wrap gap-10 justify-between items-center p-8 mt-6 w-full bg-white rounded-lg border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 items-center self-stretch my-auto min-w-[240px]">
+                    <div
+                        class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-gray-100 rounded-md h-[68px] w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45e33ad09c48903a2c5c0968cb16f22bd19247e78f2ad6ece6147b39a285a4b9?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Slack logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose text-gray-800 whitespace-nowrap">
+                            Slack
+                        </h2>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none text-gray-500">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc9e481840922b4c2d0c3aa07ebf9368a384853a4d40272352336fd77ba28248?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Hà Nội</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/da2beeb8f86d6a0cea5ad0da3d86541da0112db096504e15c97593c5f6844fcd?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Toàn thời gian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start self-stretch my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a1f0413750dc4d18183b31923ea88ca2824998a1640ab5f220a37cb95909a58?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+
+            <article
+                class="flex flex-wrap gap-10 justify-between items-center p-8 mt-6 w-full bg-white rounded-lg border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                <div class="flex gap-5 items-center self-stretch my-auto min-w-[240px]">
+                    <div class="flex gap-2.5 items-start self-stretch p-5 my-auto rounded-md w-[68px]">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/391311bbfc3ff754524ab8878613fdef2d4158f4b08222c171bcb3e0013fde26?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="Instagram logo" class="object-contain w-7 aspect-square" />
+                    </div>
+                    <div class="flex flex-col self-stretch my-auto min-w-[240px]">
+                        <h2 class="gap-2 self-start text-lg font-medium leading-loose whitespace-nowrap text-zinc-900">
+                            Instagram
+                        </h2>
+                        <div class="flex gap-4 items-center mt-3 text-sm leading-none">
+                            <div class="flex gap-1.5 items-center self-stretch my-auto text-gray-400">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc9e481840922b4c2d0c3aa07ebf9368a384853a4d40272352336fd77ba28248?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">TP. Hồ Chí Minh</span>
+                            </div>
+                            <div class="flex gap-1.5 items-center self-stretch my-auto text-gray-500">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/222b965ee2972dbcb6d3bf10088ee8e00f2d4fdfc7aa21f5ca627c0e23a7f55c?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                    alt=""
+                                    class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                                <span class="self-stretch my-auto">Bán thời gian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-start self-stretch my-auto">
+                    <button class="flex gap-2.5 items-start p-3 w-12 rounded-md" aria-label="Save job">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/961dfdfb080a49ee868f8dffcdf628b1fe5e03d316fd936ed9dadd7edf394b32?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain w-6 aspect-square" />
+                    </button>
+                    <a href="#"
+                        class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-blue-700 capitalize bg-sky-100 rounded max-md:px-5">
+                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                            alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <nav aria-label="Pagination" class="flex gap-2 items-start self-center mt-12 max-md:mt-10">
+            <button class="flex gap-2.5 items-start p-3 w-12 rotate-[3.141592653589793rad] rounded-[84px]"
+                aria-label="Previous page">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3986205b601e0f39f847dac46141617a96d5e6cac1d853468386f0d17fbf8473?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                    alt="" class="object-contain w-6 aspect-square" />
+            </button>
+            <div class="flex items-start text-sm font-medium leading-none text-center text-gray-500 whitespace-nowrap">
+                <a href="#" aria-current="page"
+                    class="px-4 w-12 h-12 text-white bg-blue-700 rounded-[50px] flex items-center justify-center">01</a>
+                <a href="#" class="px-4 py-3.5 w-12 rounded-[50px] flex items-center justify-center">02</a>
+                <a href="#" class="px-4 py-3.5 w-12 rounded-[50px] flex items-center justify-center">03</a>
+                <a href="#"
+                    class="px-4 w-12 h-12 bg-gray-100 rounded-[50px] text-zinc-900 flex items-center justify-center">04</a>
+                <a href="#" class="px-4 py-3.5 w-12 rounded-[50px] flex items-center justify-center">05</a>
+            </div>
+            <button class="flex gap-2.5 items-center p-3 w-12 h-12 bg-sky-100 rounded-[84px]" aria-label="Next page">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c11100e382323cc142561bf8e479c08a687484bb7061825f5216d435ea5d5939?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                    alt="" class="object-contain w-6 aspect-square" />
+            </button>
+        </nav>
+    </main>
+
+    <footer>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/391d0d91dd4bacbefd1164c21f612121aadf8dda3b8d829ece6b9b8505347c34?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+            alt="Footer image"
+            class="object-contain mt-24 w-full aspect-[4.26] max-w-[1920px] max-md:mt-10 max-md:max-w-full" />
+    </footer>
+</body>
+
+</html>
