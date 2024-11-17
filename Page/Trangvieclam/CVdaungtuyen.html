@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang xem CV ứng viên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="flex overflow-hidden flex-col bg-white">
+        <div
+            class="flex flex-col justify-center items-center px-16 py-5 w-full text-base font-semibold text-blue-700 capitalize bg-gray-100 border-b border-zinc-200 max-md:px-5 max-md:max-w-full">
+            <div class="flex flex-wrap gap-5 justify-between w-full max-w-[1320px] max-md:max-w-full">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/47e8dcde21ea38af29fab7a7393bbea713dddd79f49d17096d025290941d1c5a?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                    class="object-contain shrink-0 my-auto max-w-full aspect-[2.76] w-[116px]" alt="Company logo" />
+                <nav class="flex gap-6">
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/621df31815bd9e39b24c2a61f8446cad0ac08546f379a94b8d279851ac9720cc?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                        class="object-contain shrink-0 my-auto aspect-square w-[25px]" alt="Notification icon" />
+                    <button
+                        class="gap-3 self-stretch px-6 py-3 rounded border-2 border-blue-700 border-solid max-md:px-5">
+                        Đăng việc làm
+                    </button>
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/529f6005dd4a9b4927690c0c23cdaa52103253a8c42d60e7277999a7d0ca08b5?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                        class="object-contain shrink-0 w-12 aspect-square" alt="User profile" />
+                </nav>
+            </div>
+        </div>
+        <main class="self-center w-full max-w-[1320px] max-md:max-w-full">
+            <div class="flex gap-5 max-md:flex-col">
+                <aside class="flex flex-col w-[23%] max-md:ml-0 max-md:w-full">
+                    <nav
+                        class="flex flex-col justify-between items-center py-6 mx-auto w-full font-medium bg-white shadow-sm min-h-[944px] max-md:mt-10">
+                        <div class="flex flex-col justify-center items-center w-72 max-w-full">
+                            <h2 class="text-xs text-gray-400">TỔNG QUAN</h2>
+                            <ul class="flex flex-col mt-3 w-full text-sm leading-none text-gray-500 max-w-[288px]">
+                                <li class="flex gap-4 px-5 py-2.5 w-full text-blue-700 bg-sky-100">
+                                    <img loading="lazy"
+                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/98443c10f1f73782eb6081beb546387f1c336eb75bef26d42496bab648d7e008?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                        class="object-contain shrink-0 w-6 aspect-square" alt="" />
+                                    <span class="grow shrink my-auto w-[203px]">Quản lý bài đăng</span>
+                                </li>
+                                <li class="flex gap-4 px-5 py-2.5 w-full">
+                                    <img loading="lazy"
+                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/8976ee4402d48fd7b86d7568d241ef6a3377a31b7b63b899d3a1d7634fa57285?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                        class="object-contain shrink-0 w-6 aspect-square" alt="" />
+                                    <span class="grow shrink my-auto w-[203px]">Chỉnh sửa thông tin</span>
+                                </li>
+                                <li class="flex gap-4 px-5 py-2.5 w-full">
+                                    <img loading="lazy"
+                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/47cc2ae0519f2e3ca2d329e21139bfd586447efb1aa67a33e07ca408a116df17?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                        class="object-contain shrink-0 w-6 aspect-square" alt="" />
+                                    <span class="grow shrink my-auto w-[203px]">Đổi mật khẩu</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button
+                            class="flex py-2.5 w-72 max-w-full leading-none text-gray-500 mt-[690px] max-md:mt-10">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6e768004c760b6a7e1e4b00355eb5d86971541a8bc0bd38f8aa4b916a31a8ff?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                alt="" class="object-contain shrink-0 w-6 aspect-square" />
+                            <span class="shrink my-auto w-[96px]">Đăng xuất</span>
+                        </button>
+                    </nav>
+                </aside>
+                <section class="flex flex-col ml-5 w-[77%] max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col self-stretch my-auto w-full max-md:mt-10 max-md:max-w-full">
+                        <div class="flex flex-wrap gap-10 justify-between items-end w-full max-md:max-w-full">
+                            <div class="flex flex-col min-w-[240px]">
+                                <nav class="flex gap-2 items-start text-sm leading-none text-gray-500">
+                                    <span>Quản lý bài đăng</span>
+                                    <span>/</span>
+                                    <span class="font-medium text-blue-700">Xem CV ứng viên</span>
+                                </nav>
+                                <h1 class="mt-1.5 text-xl font-medium leading-relaxed text-zinc-900">
+                                    CV Ứng Viên
+                                </h1>
+                            </div>
+                            <div class="flex gap-3 items-center text-sm font-medium leading-none">
+                                <button class="gap-2.5 self-stretch px-3 py-1.5 my-auto text-gray-500 rounded">
+                                    Bộ Lọc
+                                </button>
+                                <button
+                                    class="gap-2.5 self-stretch px-3 py-1.5 my-auto text-white whitespace-nowrap bg-blue-700 rounded
+                                    hover:bg-[#0851A3]">
+                                    Chọn
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex overflow-hidden flex-col justify-center pb-5 pl-5 mt-6 w-full rounded-md border border-solid bg-gray-100 bg-opacity-50 border-zinc-200 max-md:max-w-full">
+                            <div class="z-10 -mt-4 max-md:max-w-full">
+                                <div class="flex gap-5 max-md:flex-col">
+                                    <div class="flex flex-col w-[68%] max-md:ml-0 max-md:w-full">
+                                        <div class="flex flex-col mt-8 w-full max-md:mt-10 max-md:max-w-full">
+                                            <div class="max-md:max-w-full">
+                                                <div class="flex gap-5 max-md:flex-col">
+                                                    <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                                                        <div
+                                                            class="flex flex-col w-full text-sm leading-none max-md:mt-10">
+                                                            <div
+                                                                class="flex gap-10 justify-between items-center w-full text-zinc-900">
+                                                                <h2 class="self-stretch my-auto">Tất Cả Ứng Viên (213)
+                                                                </h2>
+                                                                <div
+                                                                    class="flex shrink-0 self-stretch py-3 my-auto w-6 h-6">
+                                                                </div>
+                                                            </div>
+                                                            <article
+                                                                class="flex flex-col p-4 mt-3 w-full bg-white rounded-md border border-solid shadow-sm border-zinc-200
+                                                                hover:border hover:border-blue-700 hover:border-solid hover:shadow-xl hover:shadow-[#EDEDED] hover:bg-[linear-gradient(to_right,#FFF6E6_0%,#FFFFFF_100%)] cursor-pointer">
+                                                                <header class="flex gap-3 items-center w-60 max-w-full">
+                                                                    <img loading="lazy"
+                                                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/50e2227dc3970da3d9f830e3b43aaa9624677f24942664be23e52f683a800f45?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                        class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                                        alt="Nguyễn Văn Nam" />
+                                                                    <div
+                                                                        class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                                        <h3 class="font-medium text-zinc-900">Nguyễn Văn
+                                                                            Nam</h3>
+                                                                        <p class="mt-1 text-gray-500">UI/UX Designer</p>
+                                                                    </div>
+                                                                </header>
+                                                                <hr
+                                                                    class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                                                <div
+                                                                    class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                                    <p>7 năm kinh nghiệm</p>
+                                                                    <p class="mt-1.5">Học vấn: Đại học MTCN Hà Nội</p>
+                                                                    <p class="mt-1.5">Ngày ứng tuyển: 23.04.2024</p>
+                                                                </div>
+                                                                <a href="#"
+                                                                    class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                                    <img loading="lazy"
+                                                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                        class="object-contain shrink-0 w-5 aspect-square"
+                                                                        alt="" />
+                                                                    <span>Tải xuống CV</span>
+                                                                </a>
+                                                            </article>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                                                        <article
+                                                            class="flex flex-col p-4 mx-auto mt-9 w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200 max-md:mt-10">
+                                                            <header class="flex gap-3 items-center w-60 max-w-full">
+                                                                <img loading="lazy"
+                                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f42803d3dde5d9f87ea4292a4af9a6165b27b1f3b576a3191987333648158c5f?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                    class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                                    alt="Lê Hữu Thắng" />
+                                                                <div
+                                                                    class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                                    <h3 class="font-medium text-zinc-900">Lê Hữu Thắng
+                                                                    </h3>
+                                                                    <p class="mt-1 text-gray-500">UI/UX Designer</p>
+                                                                </div>
+                                                            </header>
+                                                            <hr
+                                                                class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                                            <div
+                                                                class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                                <p>2 năm kinh nghiệm</p>
+                                                                <p class="mt-1.5">Học vấn: Đại học Văn Lang</p>
+                                                                <p class="mt-1.5">Ngày ứng tuyển: 02.04.2024</p>
+                                                            </div>
+                                                            <a href="#"
+                                                                class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                                <img loading="lazy"
+                                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                    class="object-contain shrink-0 w-5 aspect-square"
+                                                                    alt="" />
+                                                                <span>Tải xuống CV</span>
+                                                            </a>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 max-md:max-w-full">
+                                                <div class="flex gap-5 max-md:flex-col">
+                                                    <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                                                        <article
+                                                            class="flex flex-col p-4 mx-auto w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200 max-md:mt-10">
+                                                            <header class="flex gap-3 items-center w-60 max-w-full">
+                                                                <img loading="lazy"
+                                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bbf30880108564739bb308d076577fb8bd7f66a2172e3d9f5df90bd386e71b0?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                    class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                                    alt="Nguyễn Thị Hải" />
+                                                                <div
+                                                                    class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                                    <h3 class="font-medium text-zinc-900">Nguyễn Thị Hải
+                                                                    </h3>
+                                                                    <p class="mt-1 text-gray-500">Product Designer</p>
+                                                                </div>
+                                                            </header>
+                                                            <hr
+                                                                class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                                            <div
+                                                                class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                                <p>5 năm kinh nghiệm</p>
+                                                                <p class="mt-1.5">Học vấn: Đại học Kiến Trúc</p>
+                                                                <p class="mt-1.5">Ngày ứng tuyển: 22.04.2024</p>
+                                                            </div>
+                                                            <a href="#"
+                                                                class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                                <img loading="lazy"
+                                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                    class="object-contain shrink-0 w-5 aspect-square"
+                                                                    alt="" />
+                                                                <span>Tải xuống CV</span>
+                                                            </a>
+                                                        </article>
+                                                    </div>
+                                                    <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                                                        <article
+                                                            class="flex flex-col p-4 mx-auto w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200 max-md:mt-10">
+                                                            <header class="flex gap-3 items-center w-60 max-w-full">
+                                                                <img loading="lazy"
+                                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/6df812f02987162685b9af7a6b4f561185397356f85653f4fef434e0e747be79?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                    class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                                    alt="Vũ Gia Bảo" />
+                                                                <div
+                                                                    class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                                    <h3 class="font-medium text-zinc-900">Vũ Gia Bảo
+                                                                    </h3>
+                                                                    <p class="mt-1 text-gray-500">UI Designer</p>
+                                                                </div>
+                                                            </header>
+                                                            <hr
+                                                                class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                                            <div
+                                                                class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                                <p>1 năm kinh nghiệm</p>
+                                                                <p class="mt-1.5">Học vấn: Đại học Văn Lang</p>
+                                                                <p class="mt-1.5">Ngày ứng tuyển: 03.05.2024</p>
+                                                            </div>
+                                                            <a href="#"
+                                                                class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                                <img loading="lazy"
+                                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                                    class="object-contain shrink-0 w-5 aspect-square"
+                                                                    alt="" />
+                                                                <span>Download Cv</span>
+                                                            </a>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col ml-5 w-[32%] max-md:ml-0 max-md:w-full">
+                                        <div class="flex flex-col items-start w-full max-md:mt-10">
+                                            <!-- <div
+                                                class="flex z-10 gap-6 items-start self-end p-5 bg-white rounded-lg border border-gray-200 border-solid shadow-2xl">
+                                                <div class="flex flex-col items-start w-[148px]">
+                                                    <h3 class="self-stretch text-xs font-medium text-gray-400">THỜI GIAN
+                                                    </h3>
+                                                    <div class="flex gap-2 items-center mt-3">
+                                                        <div
+                                                            class="flex flex-col justify-center self-stretch p-1 my-auto w-5 border-2 border-blue-700 border-solid fill-white stroke-[1.5px] stroke-blue-700">
+                                                            <div
+                                                                class="flex shrink-0 w-3 h-3 bg-blue-700 rounded-full fill-blue-700">
+                                                            </div>
+                                                        </div>
+                                                        <span
+                                                            class="self-stretch my-auto text-sm font-medium leading-none text-zinc-900">Mới
+                                                            nhất</span>
+                                                    </div>
+                                                    <div
+                                                        class="flex gap-2 items-center mt-3 text-sm leading-none text-gray-500">
+                                                        <div
+                                                            class="flex shrink-0 self-stretch my-auto w-5 h-5 bg-white border-solid border-[1.5px] border-zinc-200 rounded-[500px]">
+                                                        </div>
+                                                        <span class="self-stretch my-auto">Cũ nhất</span>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <article
+                                                class="flex flex-col p-4 mt-0 w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200">
+                                                <header class="flex gap-3 items-center w-60 max-w-full">
+                                                    <img loading="lazy"
+                                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/529f6005dd4a9b4927690c0c23cdaa52103253a8c42d60e7277999a7d0ca08b5?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                        class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                        alt="Phạm Quang Huy" />
+                                                    <div
+                                                        class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                        <h3 class="font-medium text-zinc-900">Phạm Quang Huy</h3>
+                                                        <p class="mt-1 text-gray-500">UI/UX Designer</p>
+                                                    </div>
+                                                </header>
+                                                <hr
+                                                    class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                                <div class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                    <p>3 năm kinh nghiệm</p>
+                                                    <p class="mt-1.5">Học vấn: Đại học Kiến Trúc</p>
+                                                    <p class="mt-1.5">Ngày ứng tuyển: 13.06.2024</p>
+                                                </div>
+                                                <a href="#"
+                                                    class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                    <img loading="lazy"
+                                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                        class="object-contain shrink-0 w-5 aspect-square" alt="" />
+                                                    <span>Tải xuống CV</span>
+                                                </a>
+                                            </article>
+                                            <article
+                                                class="flex flex-col p-4 mt-3 w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200">
+                                                <header class="flex gap-3 items-center w-60 max-w-full">
+                                                    <img loading="lazy"
+                                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a9c00385c5f5d1b029c68573a8421d5bff0e1af21958c5b669e3acf911d1ca3?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                        class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                        alt="Đặng Khánh Duy" />
+                                                    <div
+                                                        class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                        <h3 class="font-medium text-zinc-900">Đặng Khánh Duy</h3>
+                                                        <p class="mt-1 text-gray-500">UI/UX Designer</p>
+                                                    </div>
+                                                </header>
+                                                <hr
+                                                    class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                                <div class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                    <p>3 năm kinh nghiệm</p>
+                                                    <p class="mt-1.5">Học vấn: Đại học MTCN Hà Nội</p>
+                                                    <p class="mt-1.5">Ngày ứng tuyển: 03.11.2024</p>
+                                                </div>
+                                                <a href="#"
+                                                    class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                    <img loading="lazy"
+                                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                        class="object-contain shrink-0 w-5 aspect-square" alt="" />
+                                                    <span>Tải xuống CV</span>
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 mr-5 max-md:mr-2.5 max-md:max-w-full">
+                                <div class="flex gap-5 max-md:flex-col">
+                                    <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+                                        <article
+                                            class="flex flex-col p-4 mx-auto w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200 max-md:mt-10">
+                                            <header class="flex gap-3 items-center w-60 max-w-full">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d3258c19fe113770a5334177628c650bcbcb6d9278784b03a4b5341b3cf08e6?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                    class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                    alt="Phạm Nhật Vượng" />
+                                                <div class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                    <h3 class="font-medium text-zinc-900">Phạm Nhật Vượng</h3>
+                                                    <p class="mt-1 text-gray-500 whitespace-nowrap text-ellipsis">User
+                                                        Experience Designer</p>
+                                                </div>
+                                            </header>
+                                            <hr
+                                                class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                            <div class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                <p>3 năm kinh nghiệm</p>
+                                                <p class="mt-1.5">Học vấn: Đại học Văn Lang</p>
+                                                <p class="mt-1.5">Ngày ứng tuyển: 20.05.2024</p>
+                                            </div>
+                                            <a href="#"
+                                                class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                    class="object-contain shrink-0 w-5 aspect-square" alt="" />
+                                                <span>Tải xuống CV</span>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                                        <article
+                                            class="flex flex-col p-4 mx-auto w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200 max-md:mt-10">
+                                            <header class="flex gap-3 items-center w-60 max-w-full">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a9c00385c5f5d1b029c68573a8421d5bff0e1af21958c5b669e3acf911d1ca3?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                    class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                    alt="Hoàng Trường An" />
+                                                <div class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                    <h3 class="font-medium text-zinc-900">Hoàng Trường An</h3>
+                                                    <p class="mt-1 text-gray-500">UI Designer</p>
+                                                </div>
+                                            </header>
+                                            <hr
+                                                class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                            <div class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                <p>4 năm kinh nghiệm</p>
+                                                <p class="mt-1.5">Học vấn: Đại học MTCN Hà Nội</p>
+                                                <p class="mt-1.5">Ngày ứng tuyển: 19.04.2024</p>
+                                            </div>
+                                            <a href="#"
+                                                class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                    class="object-contain shrink-0 w-5 aspect-square" alt="" />
+                                                <span>Download Cv</span>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                                        <article
+                                            class="flex flex-col p-4 mx-auto w-full text-sm leading-none bg-white rounded-md border border-solid shadow-sm border-zinc-200 max-md:mt-10">
+                                            <header class="flex gap-3 items-center w-60 max-w-full">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf3b050f002815a804e3cda47ff5cedcc588a534df82a5be67fd6aacb9475e86?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                    class="object-contain shrink-0 self-stretch my-auto w-12 aspect-square rounded-[58px]"
+                                                    alt="Bùi Thành Đạt" />
+                                                <div class="flex flex-col flex-1 shrink self-stretch my-auto basis-0">
+                                                    <h3 class="font-medium text-zinc-900">Bùi Thành Đạt</h3>
+                                                    <p class="mt-1 text-gray-500">UI/UX Designer</p>
+                                                </div>
+                                            </header>
+                                            <hr
+                                                class="mt-4 w-60 max-w-full border border-solid bg-zinc-200 border-zinc-200 min-h-[1px]" />
+                                            <div class="flex flex-col mt-4 w-60 max-w-full text-gray-500">
+                                                <p>7 năm kinh nghiệm</p>
+                                                <p class="mt-1.5">Học vấn: Đại học Kiến Trúc</p>
+                                                <p class="mt-1.5">Ngày ứng tuyển: 15.11.2024</p>
+                                            </div>
+                                            <a href="#"
+                                                class="flex gap-1.5 items-start self-start mt-4 font-medium text-blue-700">
+                                                <img loading="lazy"
+                                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e46f25b795496b98949af93c950b9158da7b6172e0502aa110e688724e6efce?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
+                                                    class="object-contain shrink-0 w-5 aspect-square" alt="" />
+                                                <span>Tải xuống CV</span>
+                                            </a>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer
+            class="self-stretch px-72 py-6 text-sm leading-none text-center text-gray-500 bg-white shadow-sm w-[1320px] max-md:px-5 max-md:max-w-full">
+            @ 2024 Itseek - Thực hiện bởi Nguyễn Hồng Phong
+        </footer>
+    </header>
+</body>
+
+</html>
