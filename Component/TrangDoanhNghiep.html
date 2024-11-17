@@ -10,9 +10,8 @@
 
 <body>
     <header class="flex flex-col bg-white">
-        <div class="flex shrink-0 self-end max-w-full h-12 bg-gray-100 w-[1920px]"></div>
         <nav
-            class="flex flex-col justify-center items-center px-16 py-3 mt-56 w-full text-sm leading-none bg-gray-100 max-w-[1920px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+            class="flex flex-col justify-center items-center px-16 py-3 w-full text-sm leading-none bg-gray-100 max-w-[1920px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
             <div class="flex flex-wrap gap-5 justify-between max-w-full w-[1320px]">
                 <ul class="flex gap-6 my-auto text-gray-500">
                     <li class="grow text-gray-500"><a href="#">Trang chủ</a></li>
@@ -28,7 +27,7 @@
             </div>
         </nav>
         <div class="flex flex-wrap gap-5 justify-between self-center mt-5 w-full max-w-[1322px] max-md:max-w-full">
-            <div class="flex flex-wrap gap-8 text-base text-gray-400">
+            <div class="flex flex-wrap justify-between items-center gap-8 text-base text-gray-400">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/47e8dcde21ea38af29fab7a7393bbea713dddd79f49d17096d025290941d1c5a?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                     alt="Company logo" class="object-contain shrink-0 my-auto max-w-full aspect-[2.76] w-[116px]" />
                 <form
@@ -36,8 +35,9 @@
                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3f1205c4e3952ff56cc646c0c3e09e7d246151e6042269c524301150e8c594c?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                         alt="" class="object-contain shrink-0 w-6 aspect-square" />
                     <label for="search" class="sr-only">Tìm kiếm theo tên việc làm, doanh nghiệp</label>
-                    <input type="search" id="search" class="flex-auto max-md:max-w-full"
-                        placeholder="Tìm kiếm theo tên việc làm, doanh nghiệp" />
+                    <input type="search" id="search" 
+       class="flex-auto max-md:max-w-full w-[668px] focus:border-none focus:outline-none"
+       placeholder="Tìm kiếm theo tên việc làm, doanh nghiệp" />
                 </form>
             </div>
             <div class="flex gap-6 self-start">
@@ -51,7 +51,7 @@
 
     <main>
         <section
-            class="flex flex-wrap gap-10 justify-between items-center px-72 py-6 mt-5 w-full bg-gray-100 max-w-[1920px] max-md:px-5 max-md:max-w-full">
+            class="flex flex-wrap gap-10 justify-between items-center !px-52 py-6 mt-5 w-full bg-gray-100 ">
             <h1 class="self-stretch my-auto text-lg font-medium leading-loose text-center text-zinc-900">
                 Tìm kiếm doanh nghiệp
             </h1>
@@ -66,49 +66,50 @@
         <section
             class="flex flex-col items-center px-16 pb-8 w-full text-base bg-gray-100 max-w-[1920px] max-md:px-5 max-md:max-w-full">
             <form
-                class="flex flex-wrap gap-5 justify-between px-2.5 py-3 max-w-full bg-white rounded-lg border border-gray-100 border-solid shadow-2xl w-[1320px]">
+                class="flex flex-wrap gap-5 justify-between px-2.5 py-3 max-w-full bg-white rounded-lg border border-gray-100 border-solid shadow-sm w-[1320px]">
                 <div class="flex flex-wrap text-gray-400">
                     <div class="flex gap-10 px-5 py-1 bg-white rounded-md">
                         <div class="flex gap-3 my-auto">
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/94fd2988c0851707be41a7e9cceeb18fc4297fd8f3724b9ec33dc4ed420192c8?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                                 alt="" class="object-contain shrink-0 w-6 aspect-square" />
-                            <label for="keyword" class="basis-auto">Nhập từ khóa</label>
                         </div>
                         <input type="text" id="keyword"
-                            class="shrink-0 h-12 bg-gray-100 border border-gray-100 border-solid w-[-17px]" />
+                            class="basis-auto shrink-0 h-12 border-solid w-[-17px] hover:border-none focus:border-none focus:outline-none" placeholder="Nhập từ khóa.." />
                     </div>
                     <div class="flex gap-10 px-5 py-1 bg-white rounded-md">
                         <div class="flex gap-3 my-auto">
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c65ae5431bedc84c3b190008148325aa0ea3c58d04f3c1ae210df2666845f20d?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                                 alt="" class="object-contain shrink-0 w-6 aspect-square" />
-                            <label for="location">Địa điểm</label>
+                             <input type="text" id="keyword"
+                            class="basis-auto shrink-0 h-12 border-solid w-[-17px] hover:border-none hover:border-none focus:border-none focus:outline-none" placeholder="Địa điểm..." />
                         </div>
-                        <input type="text" id="location"
-                            class="shrink-0 h-12 bg-gray-100 border border-gray-100 border-solid w-[-17px]" />
                     </div>
                     <div class="flex gap-10 px-4 py-4 bg-white rounded-md">
                         <div class="flex gap-3">
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/97eedb3733e910e39687b768c898afc1ed0515f616e12b5ad11a3330cab11cd5?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                                 alt="" class="object-contain shrink-0 w-6 aspect-square" />
-                            <label for="type">Hình thức</label>
+                            <label for="type"></label>
                         </div>
-                        <select id="type" class="appearance-none bg-transparent">
-                            <option value="">Select type</option>
+                        <select id="type" class="appearance-none bg-transparent w-[156px] hover:border-none focus:border-none focus:outline-none">
+                            <option value="">Hình thức</option>
+                            <option value="">Remote</option>
+                            <option value="">Parttime</option>
+                            <option value="">Fulltime</option>
                         </select>
                         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f9f16392e023271f3bb5bc8b47d5d4a921072a1a7a33ee5c97e900262fc3eeb?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                             alt="" class="object-contain shrink-0 w-6 aspect-square" />
                     </div>
                 </div>
                 <button type="submit"
-                    class="gap-3 self-stretch px-8 py-4 font-semibold text-white capitalize bg-blue-700 rounded max-md:px-5">
+                    class="gap-3 self-stretch px-8 py-4 font-semibold text-white capitalize bg-blue-700 rounded max-md:px-5 hover:bg-[#0851A3]">
                     Tìm kiếm
                 </button>
             </form>
         </section>
 
-        <section class="flex flex-col self-center mt-7 max-w-full w-[1320px]">
+        <section class="flex flex-col !justify-center items-center mt-7 w-full">
             <article
-                class="flex overflow-hidden flex-wrap gap-5 justify-between py-8 pr-16 pl-8 w-full rounded-xl border border-solid border-zinc-200 max-w-[1320px] max-md:px-5 max-md:max-w-full">
+                class="flex flex-wrap gap-10 justify-between items-center p-8 mt-6 w-full rounded-xl border hover:border hover:border-blue-700 hover:border-solid hover:shadow-xl hover:shadow-[#EDEDED] hover:bg-[linear-gradient(to_right,#FFF6E6_0%,#FFFFFF_100%)] max-w-[1320px] max-md:px-5 max-md:max-w-full">
                 <div class="flex gap-5 justify-center items-center">
                     <div
                         class="flex gap-2.5 items-center self-stretch p-5 my-auto bg-pink-500 rounded-md h-[68px] w-[68px]">
@@ -367,7 +368,7 @@
                     </button>
                     <a href="#"
                         class="flex gap-3 justify-center items-center px-6 py-3 text-base font-semibold text-white capitalize bg-blue-700 rounded max-md:px-5">
-                        <span class="self-stretch my-auto">Chi tiết</span>
+                        <span class="self-stretch my-auto">Chi tiết  </span>
                         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72c910bdc0ab047ea5955f38a3ad60282ede593a9cd52829af6c667f07736419?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
                             alt="" class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     </a>
@@ -500,11 +501,11 @@
             </article>
         </section>
 
-        <nav aria-label="Pagination" class="flex gap-2 items-start self-center mt-12 max-md:mt-10">
-            <button class="flex gap-2.5 items-start p-3 w-12 rotate-[3.141592653589793rad] rounded-[84px]"
+        <nav aria-label="Pagination" class="flex gap-2 items-center justify-center mt-12 max-md:mt-10">
+            <button class="flex gap-2.5 items-start rounded-[84px]"
                 aria-label="Previous page">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3986205b601e0f39f847dac46141617a96d5e6cac1d853468386f0d17fbf8473?placeholderIfAbsent=true&apiKey=62a981c296dc4151acd2798ece477ddd"
-                    alt="" class="object-contain w-6 aspect-square" />
+                <img src="/Image/IconLeftArrow.png"
+                    alt="" class="object-contain aspect-square" />
             </button>
             <div class="flex items-start text-sm font-medium leading-none text-center text-gray-500 whitespace-nowrap">
                 <a href="#" aria-current="page"
